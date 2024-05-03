@@ -1,0 +1,31 @@
+@font-face {
+    font-family: PixCon;
+    src: url('./Fuentes/PixCon.ttf')
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary-font: PixCon;
+}
+
+h1, h2 {
+    font-family: var(--primary-font);
+}
+
+/* Seccion 2 - Slider */
+.slider {
+    text-align: center;
+}
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.slider-container img {
+    width: 200px;
+
+}
+/* Cierre seccion 2 - Slider */
