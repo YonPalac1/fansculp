@@ -1,0 +1,15 @@
+@font-face {
+    font-family: PixCon;
+    src: url('./Fuentes/PixCon.ttf')
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary-font: PixCon;
+}
+
+h1, h2 {
+    font-family: var(--primary-font);
+}
