@@ -13,3 +13,20 @@
 h1, h2 {
     font-family: var(--primary-font);
 }
+
+/* seccion 2 - Slider */
+.slider {
+    text-align: center;
+}
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.slider-container img {
+    width: 200px;
+}
+
+
+/* end seccion 2 - Slider */
