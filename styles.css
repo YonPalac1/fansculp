@@ -2,106 +2,36 @@
     font-family: PixCon;
     src: url('./Fuentes/PixCon.ttf')
 }
+@font-face {
+    font-family: Patua;
+    src: url('./Fuentes/PatuaOne-Regular.ttf')
+}
 * {
     margin: 0;
     padding: 0;
 }
 :root {
+    /* Fuentes */
     --primary-font: PixCon;
+    --secondary-font: Patua;
+
+    --black: #1f1f1f;
+    /* color botones */
+    --blue-light: #4A9EEC;
+    --blue-dark: #2A5A86;
 }
 
 h1, h2 {
     font-family: var(--primary-font);
 }
-/* navbar */
-/* display flex */
-nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    /* position: fixed;  */
-    width: 100%;
-}
-nav ul {
-    display: flex;
-    gap: 20px;
-}
-nav ul li {
-    list-style: none;
-}
-nav button {
-    background: none;
-    border: none;
-    color: white;
-}
-.menu-login {
-    background: red;
-    height: 100%;
-    position: fixed;
-    padding: 20px;
-    text-align: center;
-    left: -100%;
-    transition: 1s;
-    /* capa */
-    z-index: 2;
-}
-.menu-login.open {
-    left: 0;
-}
-.menu-login form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.backdrop {
-    background: rgba(0,0,0,0.5);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    display: none;
-}
-.backdrop.close {
-    display: block;
-    z-index: 0;
-}
-.menu-sesion {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    text-align: center;
-}
-.menu-sesion.open {
-    display: flex;
-} 
-.menu-sesion ul {
-    display: flex;
-    flex-direction: column;
-    background: #ccc;
-    padding: 20px;
-    border-radius: 12px;
-    gap: 20px;
-}
-.menu-sesion ul li {
-    list-style: none;
-}
-/* Seccion 2 - Slider */
-.slider {
-    text-align: center;
-}
-.slider-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-.slider-container img {
-    width: 200px;
 
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: red;
 }
-/* Cierre seccion 2 - Slider */
+
+#header {
+    background-color: blue;
+    padding: 10px;
+}
