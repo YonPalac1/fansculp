@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    background: rgb(49, 49, 49)
+}
+
+h4, h2, h1, small, a {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.carrousel{
+
+    width: 100%;
+    margin: 0px 0px;
+
+}
+
+@media(min-width: 768px){
+   
+    .carrousel{
+        margin: 0px 60px;
+    }
+}
+
+.carrousel h1{
+    font-size: 45px;
+    line-height: 38px;
+    padding-bottom: 50px;
+    opacity: .9;
+    text-transform: uppercase;
+    font-weight: 600px;
+    text-align: center;
+    color: white;
+}
+
+.carrousel-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+
+.carrousel-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+
+.carrousel-img{
+    position: relative;
+    width: 210px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+
+.carrousel-img h4{
+    position: absolute;
+    z-index: 1;
+    font-size: 22px;
+    line-height: 23px;
+    color: white;
+    padding: 15px;
+}
+
+.carrousel-img h4 small{
+    font-size: 15px;
+    display: block;
+}
+
+.carrousel-img a img{
+    object-fit: cover;
+    height: 300px;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 0  2px 5px 0 rgba(0, 0, 0, 0.5);
+    transition: .3s ease-in-out;
+}
+
+@media (min-width:768px) {
+    .carrousel-img{
+        width: 275px;
+    }
+    .carrousel-img a img{
+        width: 250px;
+    }
+}
+
+.carrousel-arrow{
+    border-radius: 30px;
+    background-color: white;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+}
+
+.carrousel-arrow:focus{
+    outline: 0;
+}
+
+.carrousel-arrow svg{
+    width: 12px;
+    height: 100%;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.carrousel-prev{
+    left: 0px;
+}
+
+.carrousel-next{
+    right: 0px;
+}
