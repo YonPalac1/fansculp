@@ -116,7 +116,8 @@ h1, h2 {
     box-shadow: -1px 111px 73px -5px rgba(230, 229, 229, 0.72) inset;
     -webkit-box-shadow: -1px 111px 73px -5px rgba(237,237,237,0.72) inset;
     -moz-box-shadow: -1px 111px 73px -5px rgba(237,237,237,0.72) inset;
-    padding-top: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
 }
 #header .container {
     max-width: 1200px;
@@ -125,7 +126,6 @@ h1, h2 {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-bottom: 9rem;
 }
 #header .container .titles {
     display: flex;
@@ -249,6 +249,10 @@ h1, h2 {
     background-color: #000;
 }
 @media screen and (min-width: 600px) {
+    #header {
+        padding-top: 4.5rem;
+        padding-bottom: 3rem;
+    }
     #header .container .titles h1,
     #header .container .titles span {
         font-size: 4rem;
@@ -268,6 +272,10 @@ h1, h2 {
     }
 }
 @media screen and (min-width: 700px) {
+    #header {
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+    }
     #header .container .titles h1,
     #header .container .titles span {
         font-size: 4.5rem;
