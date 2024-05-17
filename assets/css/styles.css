@@ -226,7 +226,6 @@ h1, h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    mix-blend-mode: difference;
 }
 #header .social_icons .icon a {
     font-size: 30px;
@@ -237,6 +236,7 @@ h1, h2 {
     mix-blend-mode: difference;
 }
 #header .social_icons .icon:hover {
+    mix-blend-mode: multiply;
     background: black;
     border-radius: 100%;
 }
@@ -634,7 +634,7 @@ h1, h2 {
     flex-direction: column;
     text-align: center;
     align-items: end;
-    padding: 2rem 4rem;
+    padding: 2rem 5rem;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
 }
 #contact .form_container h3 {
