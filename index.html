@@ -4,21 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fansculp</title>
-    <link rel="stylesheet" type="text/css" href="./styles/header.css">
-    <link rel="stylesheet" type="text/css" href="./styles/ultimos_diseños.css">
-    <link rel="stylesheet" type="text/css" href="./styles/footer.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="./carrousel.css">
-
+    <link rel="stylesheet" href="./assets/css/styles.css"> <!-- Link del CSS -->
     <script src="https://kit.fontawesome.com/6dd2fe1ff1.js" crossorigin="anonymous"></script>
-
-    <title>Fansculp | diseño e impresion 3d</title>
+    <!-- Link de Font Awesome -->
+    <title>FANSCULP™ | Diseño e impresion 3D</title>
+    <link rel="icon" href="./assets/images/favicon 02.webp" type="image/x-icon">
 </head>
 
 <body>
     <!-- Navbar -->
-    <!-- /Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo"><a href=""><img src="./assets/images/footer/logo_white_01.png" alt="Logo Fansculp"></a>
+            </div> <!-- Div vacio para que se expanda junto con los otros elementos -->
+            <ul>
+                <li><a href="#">DISEÑOS</a></li>
+                <li><a href="#">NOSOTROS</a></li>
+                <li><a href="#">COMENTARIOS</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+            <div class="user"><i class="fa-solid fa-user"></i></div> <!-- TODO: Cambiar por un ícono de USER -->
+        </nav>
+    </header>
+    <!-- Fin Navbar -->
 
     <!-- Header -->
     <div id="cursor"></div>
@@ -28,8 +36,8 @@
                 <h1 onmouseover="mouseOver()" onmouseout="mouseOut()">Fansculp</h1>
                 <div class="subtitle">
                     <h2>diseño e impresión</h2>
-                    <img class="icon" src="./images/3d_icon.png" alt="logo fansculp 3d"></img>
-                    <img class="arrow" src="./images/triple_arrow.png" alt="logo fansculp 3d"></img>
+                    <img class="icon" src="./assets/images/3d_icon.png" alt="logo fansculp 3d"></img>
+                    <img class="arrow" src="./assets/images/triple_arrow.png" alt="logo fansculp 3d"></img>
                 </div>
             </div>
             <div class="back_text">
@@ -89,165 +97,207 @@
             </div>
         </div>
     </header>
-    <!-- /Header -->
+    <!-- Fin Header -->
 
     <!-- Ultimos diseños -->
-    <div class="carrousel">
-        <h1>Últimos Diseños</h1>
-        <div class="carrousel-list" id="carrousel-list">
+    <section id="last_designs">
+        <div class="carrousel" id="carrousel">
+            <h1>ÚLTIMOS DISEÑOS</h1>
+            <div class="carrousel-list" id="carrousel-list">
 
-            <button class="carrousel-arrow carrousel-prev" id="button-prev" data-button="button-prev"
-                onclick="app.processingButton(event)">
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
-                    class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 320 512">
-                    <path fill="currentColor"
-                        d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
-                    </path>
-                </svg>
-            </button>
+                <button class="carrousel-arrow carrousel-prev" id="button-prev" data-button="button-prev"
+                    onclick="app.processingButton(event)">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
+                        class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                        </path>
+                    </svg>
+                </button>
 
-            <div class="carrousel-track" id="track">
+                <div class="carrousel-track" id="track">
 
-                <div class="carrousel-img">
-                    <div>
-                        <a href="/">
-                            <h4> <small>Imagen</small> Mas </h4>
-                            <picture>
-                                <img src="./images/carrousel/Funko a01.jpg" alt="Funko rojo">
-                            </picture>
-                        </a>
+                    <div class="carrousel-img">
+                        <div>
+                            <a href="/">
+                                <h4> <small>Imagen</small> Mas </h4>
+                                <picture>
+                                    <img src="./assets/images/carrousel/Funko_a01.webp" alt="Funko rojo">
+                                </picture>
+                            </a>
+                        </div>
                     </div>
+
+                    <div class="carrousel-img">
+                        <div>
+                            <a href="/">
+                                <h4> <small>Imagen</small> Mas </h4>
+                                <picture>
+                                    <img src="./assets/images/carrousel/Funko_a02.webp" alt="Funko azul">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carrousel-img">
+                        <div>
+                            <a href="/">
+                                <h4> <small>Imagen</small> Mas </h4>
+                                <picture>
+                                    <img src="./assets/images/carrousel/Funko_a03.webp" alt="Funko marron">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carrousel-img">
+                        <div>
+                            <a href="/">
+                                <h4> <small>Imagen</small> Mas </h4>
+                                <picture>
+                                    <img src="./assets/images/carrousel/Funko_a04.webp" alt="Funko gris">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carrousel-img">
+                        <div>
+                            <a href="/">
+                                <h4> <small>Imagen</small> Mas </h4>
+                                <picture>
+                                    <img src="./assets/images/carrousel/Funko_a05.webp" alt="Funko despiezado">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carrousel-img">
+                        <div>
+                            <a href="/">
+                                <h4> <small>Imagen</small> Mas </h4>
+                                <picture>
+                                    <img src="./assets/images/carrousel/Funko_a01.webp" alt="Funko rojo">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carrousel-img">
+                        <div>
+                            <a href="/">
+                                <h4> <small>Imagen</small> Mas </h4>
+                                <picture>
+                                    <img src="./assets/images/carrousel/Funko_a02.webp" alt="Funko azul">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carrousel-img">
+                        <div>
+                            <a href="/">
+                                <h4> <small>Imagen</small> Mas </h4>
+                                <picture>
+                                    <img src="./assets/images/carrousel/Funko_a03.webp" alt="Funko marron">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carrousel-img">
+                        <div>
+                            <a href="/">
+                                <h4> <small>Imagen</small> Mas </h4>
+                                <picture>
+                                    <img src="./assets/images/carrousel/Funko_a04.webp" alt="Funko gris">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carrousel-img">
+                        <div>
+                            <a href="/">
+                                <h4> <small>Imagen</small> Mas </h4>
+                                <picture>
+                                    <img src="./assets/images/carrousel/Funko_a05.webp" alt="Funko despiezado">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="carrousel-img">
-                    <div>
-                        <a href="/">
-                            <h4> <small>Imagen</small> Mas </h4>
-                            <picture>
-                                <img src="./images/carrousel/Funko a02.jpg" alt="Funko azul">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="carrousel-img">
-                    <div>
-                        <a href="/">
-                            <h4> <small>Imagen</small> Mas </h4>
-                            <picture>
-                                <img src="./images/carrousel/Funko a03.jpg" alt="Funko marron">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="carrousel-img">
-                    <div>
-                        <a href="/">
-                            <h4> <small>Imagen</small> Mas </h4>
-                            <picture>
-                                <img src="./images/carrousel/Funko a04.jpg" alt="Funko gris">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="carrousel-img">
-                    <div>
-                        <a href="/">
-                            <h4> <small>Imagen</small> Mas </h4>
-                            <picture>
-                                <img src="./images/carrousel/Funko a05.jpg" alt="Funko despiezado">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="carrousel-img">
-                    <div>
-                        <a href="/">
-                            <h4> <small>Imagen</small> Mas </h4>
-                            <picture>
-                                <img src="./images/carrousel/Funko a01.jpg" alt="Funko rojo">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="carrousel-img">
-                    <div>
-                        <a href="/">
-                            <h4> <small>Imagen</small> Mas </h4>
-                            <picture>
-                                <img src="./images/carrousel/Funko a02.jpg" alt="Funko azul">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="carrousel-img">
-                    <div>
-                        <a href="/">
-                            <h4> <small>Imagen</small> Mas </h4>
-                            <picture>
-                                <img src="./images/carrousel/Funko a03.jpg" alt="Funko marron">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="carrousel-img">
-                    <div>
-                        <a href="/">
-                            <h4> <small>Imagen</small> Mas </h4>
-                            <picture>
-                                <img src="./images/carrousel/Funko a04.jpg" alt="Funko gris">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="carrousel-img">
-                    <div>
-                        <a href="/">
-                            <h4> <small>Imagen</small> Mas </h4>
-                            <picture>
-                                <img src="./images/carrousel/Funko a05.jpg" alt="Funko despiezado">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
+                <button class="carrousel-arrow carrousel-next" id="button-next" data-button="button-next"
+                    onclick="app.processingButton(event)">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                        class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                        </path>
+                    </svg>
+                </button>
 
             </div>
 
-            <button class="carrousel-arrow carrousel-next" id="button-next" data-button="button-next"
-                onclick="app.processingButton(event)">
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
-                    class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 320 512">
-                    <path fill="currentColor"
-                        d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
-                    </path>
-                </svg>
-            </button>
-
         </div>
-
-    </div>
-    <!-- /Ultimos diseños -->
+    </section>
+    <!-- Fin Ultimos diseños -->
 
     <!-- Todos los diseños -->
-    <!-- /Todos los diseños -->
+    <section id="all_designs">
+        <div class="container">
+            <h1>TODOS LOS DISEÑOS</h1>
+
+            <div class="filters"> <!-- Botones de filtros -->
+                <button class="active">FILTRO</button>
+                <button>FILTRO</button>
+                <button>FILTRO</button>
+                <button>FILTRO</button>
+                <button>FILTRO</button>
+            </div>
+
+            <div class="container_designs"> <!-- Cuadro de Imágenes -->
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 00.webp" alt=""></div>
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 01.webp" alt=""></div>
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 02.webp" alt=""></div>
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 03.webp" alt=""></div>
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 04.webp" alt=""></div>
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 05.webp" alt=""></div>
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 06.webp" alt=""></div>
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 07.webp" alt=""></div>
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 08.webp" alt=""></div>
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 09.webp" alt=""></div>
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 00.webp" alt=""></div>
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 01.webp" alt=""></div>
+            </div>
+
+            <div class="pages_designs"> <!-- Boton de páginas -->
+                <button>
+                    < </button>
+                        <p>2</p>
+                        <button>
+                            >
+                        </button>
+            </div>
+
+
+
+        </div>
+    </section>
+    <!-- Fin Todos los diseños -->
 
     <!-- Formulario -->
-    <!-- /Formulario -->
+    <!-- Fin Formulario -->
 
     <!-- Comentarios -->
-    <!-- Comentarios -->
+    <!-- Fin Comentarios -->
 
     <!-- Consultanos -->
-    <!-- Consultanos -->
+    <!-- Fin Consultanos -->
 
     <!-- Footer -->
     <footer class="pie-pagina">
@@ -257,7 +307,7 @@
             <div class="box">
                 <figure>
                     <a href="#">
-                        <img src="./images/footer/logo white 01.png" alt="Logo FANSCULP">
+                        <img src="./assets/images/footer/logo_white_01.png" alt="Logo FANSCULP">
                     </a>
                 </figure>
             </div>
@@ -285,10 +335,10 @@
                 - Todos los Derechos Reservados.</small>
         </div>
     </footer>
-    <!-- /Footer -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="./script.js" type="text/javascript"></script>
-    <script src="./js/headerFunctions.js" type="text/javascript"></script>
-    <script src="./js/carrouselFunctions.js"></script>
+    <!-- Fin Footer -->
+
+    <!-- !Link de JS -->
+    <script src="./assets/js/index.js"></script>
 </body>
+
 </html>
