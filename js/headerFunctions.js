@@ -7,18 +7,7 @@ let hue = 0;
 let cursorCircles;
 let cursorHistory = Array(TAIL_LENGTH).fill({ x: 0, y: 0 });
 
-let letters = document.getElementsByClassName("letter")
-let rgb = [
-    [255, 255, 255],
-    [146, 2, 218],
-    [18, 2, 218],
-    [2, 117, 218],
-    [94, 60, 144],
-    [61, 60, 144],
-    [144, 60, 115],
-    [60, 141, 144],
-]
-let stylebg = rgb[0];
+let parallax = document.querySelectorAll("back_parallax")
 
 // funciones para el cursor punteado
 function onMouseMove(event) {
@@ -54,23 +43,10 @@ function updateCursor() {
         current.y += yDiff * 0.35;
 
         cursorCircles[i].style.transform = `translate(${current.x}px, ${current.y}px) scale(${i / TAIL_LENGTH})`;
-        cursorCircles[i].style.background = "rgba("+ stylebg[0]+","+ stylebg[1]+","+ stylebg[2]+",1)";
+        cursorCircles[i].style.background = "white";
     }
     requestAnimationFrame(updateCursor)
 }
-
-// hover sobre las letras de manera random
-for (let l of letters) {
-    l.addEventListener("mouseover", () => {
-        stylebg = rgb[getRandomInt(0, rgb.length - 1)]
-        l.style.color = "rgba("+ stylebg[0]+","+ stylebg[1]+","+ stylebg[2]+", 1)"; 
-    })
-    l.addEventListener("mouseout", () => {
-        l.style.color = "white"
-        stylebg = rgb[0]
-    })
-}
-
 
 document.addEventListener('mousemove', onMouseMove, false);
 
@@ -113,3 +89,7 @@ function trackMouse(e) {
     )
   }
 document.addEventListener("mousemove", trackMouse)
+
+for (let i = 0; i < parallax.length; i++) {
+    
+}

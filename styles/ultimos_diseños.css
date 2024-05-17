@@ -109,6 +109,7 @@ i{
     overflow: auto;
     padding: 20px;
     gap: 20px;
+    width: 100%;
 }
 #ultimos .container_slider img {
     width: 300px;
