@@ -238,19 +238,7 @@
                 <button>FILTRO</button>
             </div>
 
-            <div class="container_designs"> <!-- Cuadro de Imágenes -->
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 00.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 01.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 02.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 03.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 04.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 05.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 06.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 07.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 08.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 09.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 00.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga 01.webp" alt=""></div>
+            <div class="container_designs" id="container_designs"> <!-- Cuadro de Imágenes -->
             </div>
 
             <div class="pages_designs"> <!-- Boton de páginas -->
@@ -276,8 +264,33 @@
 
     <!-- Consultanos -->
     <section id="contact">
-        <div class="form_container">
+        <div class="indications">
             <div>
+                <div class="indications_item">
+                    <img src="./assets/images/bulb.webp" alt="bulb">
+                    <p>escribinos tu idea</p>
+                    <span>1</span>
+                </div>
+            </div>
+            <div>
+
+                <div class="indications_item">
+                    <img src="./assets/images/hand.webp" alt="hand">
+                    <p>aprobas precio y diseño</p>
+                    <span>2</span>
+                </div>
+            </div>
+            <div>
+                <div class="indications_item">
+                    <img src="./assets/images/download.png" alt="download">
+                    <p>descargas tu stl</p>
+                    <span>3</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form">
+            <div class="container">
                 <h3>¡contanos tu idea!</h3>
                 <form>
                     <label>nombre</label>
@@ -288,29 +301,6 @@
                     <textarea></textarea>
                     <button>enviar</button>
                 </form>
-            </div>
-        </div>
-        <div class="indications">
-            <div>
-                <div class="back_black"></div>
-                <span>1</span>
-                <img class="arrow" src="./assets/images/triangle_black.png" alt="triangle">
-                <p>escribinos tu idea</p>
-                <img src="./assets/images/bulb.webp" alt="bulb">
-            </div>
-            <div>
-                <div class="back_black"></div>
-                <span>2</span>
-                <img class="arrow" src="./assets/images/triangle_black.png" alt="triangle">
-                <p>aprobas precio y diseño</p>
-                <img src="./assets/images/hand.webp" alt="hand">
-            </div>
-            <div>
-                <div class="back_black"></div>
-                <span>3</span>
-                <img class="arrow" src="./assets/images/triangle_black.png" alt="triangle">
-                <p>descargas tu stl</p>
-                <img src="./assets/images/download.png" alt="download">
             </div>
         </div>
     </section>
@@ -357,6 +347,7 @@
     <!-- !Link de JS -->
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/cursorTail.js"></script>
+    <script src="./assets/js/imagesFunction.js"></script>
 </body>
 
 </html>
