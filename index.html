@@ -4,33 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/styles.css"> <!-- Link del CSS -->
-    <script src="https://kit.fontawesome.com/6dd2fe1ff1.js" crossorigin="anonymous"></script>
-
-    <!-- Link de Font Awesome -->
+    <link rel="icon" href="./assets/images/favicon 02.webp" type="image/x-icon"> <!-- Link del favicon -->
     <title>FANSCULP™ | Diseño e impresion 3D</title>
-    <link rel="icon" href="./assets/images/favicon 02.webp" type="image/x-icon">
+    
+    <link rel="stylesheet" href="./assets/css/styles.css"> <!-- Link del CSS -->
+    <script src="https://kit.fontawesome.com/6dd2fe1ff1.js" crossorigin="anonymous"></script> <!-- Link de Font Awesome -->
 </head>
 
 <body>
     <!-- Navbar -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo"><a href=""><img src="./assets/images/footer/logo_white_01.png" alt="Logo Fansculp"></a>
-            </div> <!-- Div vacio para que se expanda junto con los otros elementos -->
-            <ul>
+    <header class="nav-header">
+        <a href="#header"><img class="nav-logo" src="./assets/images/footer/logo_white_01.png" alt="Logo Fansculp"></a>
+
+        <button class="open-menu" id="open"><i class="fa-solid fa-bars"></i></i></button>
+       
+        <nav class="nav" id="nav">
+
+            <button class="close-menu" id="close"><i class="fa-regular fa-circle-xmark"></i></button>
+            
+            <ul class="nav-list">
+                <li><a href="#header">INICIO</a></li>
                 <li><a href="#all_designs">DISEÑOS</a></li>
-                <li><a href="#">NOSOTROS</a></li>
-                <li><a href="#">COMENTARIOS</a></li>
-                <li><a href="#">CONTACTO</a></li>
+                <li><a href="#about-us">NOSOTROS</a></li>
+                <li><a href="#comments">RESEÑAS</a></li>
+                <li><a href="#about-us">CONTACTO</a></li>
+                <li><img class="nav-user" src="./assets/images/user.webp" alt=""></li>
             </ul>
-            <div class="user"><i class="fa-solid fa-user"></i></div> <!-- TODO: Cambiar por un ícono de USER -->
         </nav>
     </header>
     <!-- Fin Navbar -->
-
-    <!-- formularios -->
-    <!-- formularios -->
 
     <!-- Header -->
     <div id="cursor"></div>
@@ -268,13 +270,15 @@
     </section>
     <!-- Fin Todos los diseños -->
 
-    <!-- Formulario -->
-    <!-- Fin Formulario -->
-
     <!-- Comentarios -->
+
+    <section id="comments">
+
+    </section>
+
     <!-- Fin Comentarios -->
 
-    <!-- Consultanos -->
+    <!-- Formulario -->
     <section id="contact">
         <div class="form_container">
             <div>
@@ -295,29 +299,29 @@
                 <div class="back_black"></div>
                 <span>1</span>
                 <img class="arrow" src="./assets/images/triangle_black.png" alt="triangle">
-                <p>escribinos tu idea</p>
+                <p>Escribinos tu idea.</p>
                 <img src="./assets/images/bulb.webp" alt="bulb">
             </div>
             <div>
                 <div class="back_black"></div>
                 <span>2</span>
                 <img class="arrow" src="./assets/images/triangle_black.png" alt="triangle">
-                <p>aprobas precio y diseño</p>
+                <p>Aprobás precio y diseño.</p>
                 <img src="./assets/images/hand.webp" alt="hand">
             </div>
             <div>
                 <div class="back_black"></div>
                 <span>3</span>
                 <img class="arrow" src="./assets/images/triangle_black.png" alt="triangle">
-                <p>descargas tu stl</p>
+                <p>Descargás tu archivo .stl</p>
                 <img src="./assets/images/download.png" alt="download">
             </div>
         </div>
     </section>
-    <!-- Fin Consultanos -->
+    <!-- Fin Formulario -->
 
     <!-- Footer -->
-    <footer class="pie-pagina">
+    <footer id="about-us" class="pie-pagina">
         <!--CONTENEDOR PADRE-->
         <div class="grupo-1">
             <!--BOX 01-->
@@ -357,6 +361,7 @@
     <!-- !Link de JS -->
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/cursorTail.js"></script>
+    <script src="./assets/js/loader.js"></script>
 </body>
 
 </html>
