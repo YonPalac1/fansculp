@@ -69,13 +69,16 @@ function openLogin() {
     modals.classList.add("openModal")
     form_register.style.display = "none"
     form_login.style.display = "flex"
+    nav.classList.remove("visible");
 }
 function openRegister() {
     menuOptions.classList.remove("open")
     modals.classList.add("openModal")
     form_login.style.display = "none"
     form_register.style.display = "flex"
+    nav.classList.remove("visible");
 }
 function removeModals() {
     modals.classList.remove("openModal")
+    nav.classList.remove("visible");
 }
