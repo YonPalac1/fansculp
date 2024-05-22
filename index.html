@@ -28,11 +28,53 @@
                 <li><a href="#about-us">NOSOTROS</a></li>
                 <li><a href="#comments">RESEÑAS</a></li>
                 <li><a href="#about-us">CONTACTO</a></li>
-                <li><img class="nav-user" src="./assets/images/user.webp" alt=""></li>
+                <li onclick="openMenu()"><img class="nav-user" src="./assets/images/user.webp" alt=""></li>
             </ul>
         </nav>
     </header>
+    <div class="options_box">
+        <span class="item" onclick="openLogin()">ingresar</span>
+        <span class="item" onclick="openRegister()">registrarse</span>
+    </div>
     <!-- Fin Navbar -->
+    <!-- modales -->
+    <section id="modals">
+        <div class="backdrop" onclick="removeModals()"></div>
+        <div class="card_forms" id="form_login">
+            <h4>ingresar</h4>
+            <form>
+                <label>nombre</label>
+                <input type="text" placeholder="nombre">
+                <label>contraseña</label>
+                <input type="password" placeholder="contraseña">
+                <button>Ingresar</button>
+            </form>
+            <div>
+                <p>no tienes una cuenta?</p> 
+                <span onclick="openRegister()">registrate</span>
+            </div>
+        </div>
+
+        <div class="card_forms" id="form_register">
+            <h4>registrarse</h4>
+            <form>
+                <label>nombre</label>
+                <input type="text" placeholder="nombre">
+                <label>email</label>
+                <input type="email" placeholder="email">
+                <label>contraseña</label>
+                <input type="password" placeholder="contraseña">
+                <label>repetir contraseña</label>
+                <input type="password" placeholder="contraseña">
+                <button>registrar</button>
+            </form>
+            <div>
+                <p>ya tienes una cuenta?</p> 
+                <span onclick="openLogin()">ingresa</span>
+            </div>
+        </div>
+    </section>
+    <!-- fin modales -->
 
     <!-- Header -->
     <div id="cursor"></div>

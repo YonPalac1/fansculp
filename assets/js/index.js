@@ -53,3 +53,29 @@ close.addEventListener("click", () => {
 })
 
 // *FIN Navbar Functions
+
+// funciones login y registro modales y menu
+
+let menuOptions = document.querySelector(".options_box")
+let form_login = document.querySelector("#form_login")
+let form_register = document.querySelector("#form_register")
+let modals = document.querySelector("#modals")
+
+function openMenu() {
+    menuOptions.classList.toggle("open")
+}
+function openLogin() {
+    menuOptions.classList.remove("open")
+    modals.classList.add("openModal")
+    form_register.style.display = "none"
+    form_login.style.display = "flex"
+}
+function openRegister() {
+    menuOptions.classList.remove("open")
+    modals.classList.add("openModal")
+    form_login.style.display = "none"
+    form_register.style.display = "flex"
+}
+function removeModals() {
+    modals.classList.remove("openModal")
+}
