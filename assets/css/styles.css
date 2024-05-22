@@ -148,14 +148,14 @@ h1, h2 {
 #header {
     position: relative;
     cursor: crosshair;
-    box-shadow: -1px 111px 73px -5px rgba(230, 229, 229, 0.72) inset;
-    -webkit-box-shadow: -1px 111px 73px -5px rgba(237,237,237,0.72) inset;
-    -moz-box-shadow: -1px 111px 73px -5px rgba(237,237,237,0.72) inset;
+    box-shadow: -0.0625rem 6.9375rem 4.5625rem -0.3125rem rgba(230, 229, 229, 0.72) inset;
+    -webkit-box-shadow: -0.0625rem 6.9375rem 4.5625rem -0.3125rem rgba(237,237,237,0.72) inset;
+    -moz-box-shadow: -0.0625rem 6.9375rem 4.5625rem -0.3125rem rgba(237,237,237,0.72) inset;
     padding-top: 5rem;
     padding-bottom: 3rem;
 }
 #header .container {
-    max-width: 1200px;
+    max-width: 75rem;
     margin: auto;
     text-align: center;
     display: flex;
@@ -173,17 +173,17 @@ h1, h2 {
 #header .container .titles h1 {
     font-size: 3rem;
     color: black;
-    margin-bottom: -50px;
+    margin-bottom: -3.125rem;
     z-index: 10;
-    text-shadow: -2px 4px 6px rgba(0,0,0,0.6);
-    -webkit-text-shadow: -2px 4px 6px rgba(0,0,0,0.6);
-    -moz-text-shadow: -2px 4px 6px rgba(0,0,0,0.6);
+    text-shadow: -0.125rem .25rem .375rem rgba(0,0,0,0.6);
+    -webkit-text-shadow: -0.125rem .25rem .375rem rgba(0,0,0,0.6);
+    -moz-text-shadow: -0.125rem .25rem .375rem rgba(0,0,0,0.6);
     cursor: none;
 }
 #header .container .titles h2 {
-    font-size: 12px;
+    font-size: .75rem;
     color: white;
-    padding: 8px;
+    padding: .5rem;
     z-index: 2;
 
     mix-blend-mode: difference;
@@ -191,11 +191,11 @@ h1, h2 {
 #header .container .titles span {
     display: block;
     position: relative;
-    margin-bottom: -50px;
+    margin-bottom: -3.125rem;
     color: white;
-    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-width: .0313rem;
     -webkit-text-stroke-color: black;
-    text-shadow: -3px 3px gray;
+    text-shadow: -0.1875rem .1875rem gray;
     left: calc(var(--cursorXPos) / -50);
     top: calc(var(--cursorYPos) / -50);
 }
@@ -211,21 +211,21 @@ h1, h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
+    max-width: 75rem;
     width: 80%;
-    margin-top: -18px;
+    margin-top: -1.125rem;
     position: relative;
-    box-shadow: 0px -6px 36px -3px rgba(0,0,0,0.72);
-    -webkit-box-shadow: 0px -6px 36px -3px rgba(0,0,0,0.72);
-    -moz-box-shadow: 0px -6px 36px -3px rgba(0,0,0,0.72);
+    box-shadow: 0rem -0.375rem 2.25rem -0.1875rem rgba(0,0,0,0.72);
+    -webkit-box-shadow: 0rem -0.375rem 2.25rem -0.1875rem rgba(0,0,0,0.72);
+    -moz-box-shadow: 0rem -0.375rem 2.25rem -0.1875rem rgba(0,0,0,0.72);
 }
 #header .container .subtitles img.icon {
     position: absolute;
-    right: -20px;
-    width: 100px;
+    right: -1.25rem;
+    width: 6.25rem;
 }
 #header .container .titles .arrow {
-    width: 30px;
+    width: 1.875rem;
     z-index: 4;
 }
 #header .bg_images {
@@ -235,7 +235,7 @@ h1, h2 {
     z-index: 5;
 }
 #header .bg_images img {
-    width: 100px;
+    width: 6.25rem;
     opacity: 0;
     scale: 0.5;
     transition: .2s;
@@ -246,24 +246,24 @@ h1, h2 {
 }
 #header .social_icons {
     position: fixed;
-    left: 50px;
+    left: 3.125rem;
     bottom: 0;
     display: none;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: .625rem;
     z-index: 2;
 }
 
 #header .social_icons .icon {
-    width: 35px;
-    height: 35px;
+    width: 2.1875rem;
+    height: 2.1875rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #header .social_icons .icon a {
-    font-size: 30px;
+    font-size: 1.875rem;
     color: black;
     cursor: none;
     list-style: none;
@@ -279,7 +279,7 @@ h1, h2 {
     color: white;
 }
 #header .social_icons .line {
-    width: 3px;
+    width: .1875rem;
     height: 5rem;
     background-color: #000;
 }
@@ -291,19 +291,19 @@ h1, h2 {
     #header .container .titles h1,
     #header .container .titles span {
         font-size: 4rem;
-        margin-bottom: -70px;
+        margin-bottom: -4.375rem;
     }
     #header .container .subtitles {
         width: 60%;
     }
     #header .container .subtitles img.icon {
-        width: 130px;
+        width: 8.125rem;
     }
     #header .social_icons {
         display: flex;
     }
     #header .bg_images img {
-        width: 200px;
+        width: 12.5rem;
     }
 }
 @media screen and (min-width: 700px) {
@@ -314,20 +314,20 @@ h1, h2 {
     #header .container .titles h1,
     #header .container .titles span {
         font-size: 4.5rem;
-        margin-bottom: -80px;
+        margin-bottom: -5rem;
     }
     #header .container .subtitles {
         width: 70%;
-        margin-top: -30px;
+        margin-top: -1.875rem;
     }
     #header .container .subtitles img.icon {
-        width: 130px;
+        width: 8.125rem;
     }
     #header .container .titles h2 {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
     #header .container .titles .arrow {
-        width: 40px;
+        width: 2.5rem;
     }
 }
 @media screen and (min-width: 800px) {
@@ -336,78 +336,78 @@ h1, h2 {
         font-size: 5rem;
     }
     #header .container .subtitles {
-        margin-top: -50px;
+        margin-top: -3.125rem;
     }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 56.25rem) {
     #header .container .titles h1,
     #header .container .titles span {
         font-size: 5.5rem;
     }
     #header .container .subtitles {
-        margin-top: -80px;
+        margin-top: -5rem;
     }
     #header .container .titles h2 {
-        font-size: 22px;
+        font-size: 1.375rem;
     }
 }
 @media screen and (min-width: 1000px) {
     #header .container .titles h1,
     #header .container .titles span {
         font-size: 6rem;
-        margin-top: -20px;
+        margin-top: -1.25rem;
     }
     #header .container .titles h2 {
-        font-size: 22px;
+        font-size: 1.375rem;
     }
     #header .container .titles .arrow {
-        width: 50px;
+        width: 3.125rem;
     }
 }
 @media screen and (min-width: 1100px) {
     #header .container .titles h1,
     #header .container .titles span {
         font-size: 6.5rem;
-        margin-bottom: -100px;
+        margin-bottom: -6.25rem;
     }
     #header .container .subtitles {
-        margin-top: -30px;
+        margin-top: -1.875rem;
     }
     #header .container .titles h2 {
-        font-size: 22px;
+        font-size: 1.375rem;
     }
     #header .container .titles .arrow {
-        width: 50px;
+        width: 3.125rem;
     }
 }
 @media screen and (min-width: 1200px) {
     #header .container .titles h1,
     #header .container .titles span {
         font-size: 7rem;
-        margin-bottom: -100px;
+        margin-bottom: -6.25rem;
     }
     #header .container .subtitles {
-        margin-top: -80px;
+        margin-top: -5rem;
     }
 }
 @media screen and (min-width: 1300px) {
     #header .container .titles h1,
     #header .container .titles span {
         font-size: 8rem;
-        margin-bottom: -110px;
+        margin-bottom: -6.875rem;
     }
     #header .container .subtitles {
-        margin-top: -120px;
+        margin-top: -7.5rem;
     }
 }
 @media screen and (min-width: 1500px) {
     #header .container .titles h1,
     #header .container .titles span {
         font-size: 9rem;
-        margin-bottom: -140px;
+        margin-bottom: -8.75rem;
     }
     #header .container .subtitles {
-        margin-top: -80px;
+        margin-top: -5rem;
     }
 }
 
@@ -644,7 +644,25 @@ h1, h2 {
 #all_designs .pages_designs button:hover{
     background-color: #2a5a86;
 }
-/* *FIN TODOS LOS DISEÑOS* */
+    /* *Fin Estilos Botón de Página */
+
+    /* *Estilos Texto Abajo Botones de Páginas */
+#all_designs .container_text h2, p{
+    text-align: center;
+}
+
+#all_designs .container_text h2{
+    font-size: 2.8125rem;
+    font-family: var(--secondary-font);
+}
+
+#all_designs .container_text p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4375rem;
+    margin: 2.5rem 6.25rem;
+}
+    /* *Estilos Texto Abajo Botones de Páginas */
+    /* *FIN TODOS LOS DISEÑOS* */
 
 
 /* ESTILOS FORMULARIO */
@@ -669,7 +687,7 @@ h1, h2 {
     text-align: center;
     align-items: end;
     padding: 2rem 5rem;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: .625rem .625rem rgba(0, 0, 0, 0.5);
 }
 #contact .form_container h3 {
     font-family: var(--primary-font);
@@ -687,22 +705,22 @@ h1, h2 {
 #contact .form_container form input,
 #contact .form_container form textarea {
     border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
+    padding: .5rem .75rem;
+    border-radius: .5rem;
 }
 #contact .form_container form textarea {
-    min-height: 100px;
+    min-height: 6.25rem;
 }
 #contact .form_container form label {
     font-family: var(--secondary-font);
     color: white;
-    margin-top: 12px ;
+    margin-top: .75rem ;
 }
 #contact .form_container form button {
     border: none;
     background-color: var(--blue-dark);
     color: white;
-    padding: 12px;
+    padding: .75rem;
     font-size: 1rem;
     margin-top: 2rem;
     cursor: pointer;
@@ -724,20 +742,20 @@ h1, h2 {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    margin-left: 10px;
+    margin-left: .625rem;
 }
 .indications > div span {
     font-size: 2rem;
     background-color: white;
     color: black;
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 2px solid black;
-    left: -60px;
+    border: .125rem solid black;
+    left: -3.75rem;
     position: relative;
 }
 .indications > div p {
@@ -751,8 +769,8 @@ h1, h2 {
 }
 .indications > div img.arrow {
     position: absolute;
-    top: 19px;
-    left: -30px;
+    top: 1.1875rem;
+    left: -1.875rem;
     transform: rotate(90deg);
 }
 .indications .back_black {
@@ -761,8 +779,8 @@ h1, h2 {
     height: 2.5rem;
     z-index: -1;
     position: absolute;
-    top: 10px;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+    top: .625rem;
+    box-shadow: .625rem .625rem rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
