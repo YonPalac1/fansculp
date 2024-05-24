@@ -1,38 +1,38 @@
 // *Carrousel Functions
 
-function App() {}
+function App() { }
 
-    window.onload = function(event) {
-        var app = new App();
-        window.app = app;
+window.onload = function (event) {
+    var app = new App();
+    window.app = app;
+}
+
+App.prototype.processingButton = function (event) {
+    const btn = event.currentTarget;
+    const carrouselList = event.currentTarget.parentNode;
+    const track = event.currentTarget.parentNode.querySelector('#track');
+    const carrousel = track.querySelectorAll('.carrousel-img');
+
+    const carrouselWidth = carrousel[0].offsetWidth;
+
+    const trackWidth = track.offsetWidth;
+    const listWidth = carrouselList.offsetWidth;
+
+    track.style.left == "" ? leftPosition = track.style.left = 0 : leftPosition = parseFloat(track.style.left.slice(0, -2) * -1);
+    btn.dataset.button == "button-prev" ? prevAction(leftPosition, carrouselWidth, track) : nextAction(leftPosition, trackWidth, listWidth, carrouselWidth, track);
+
+}
+
+let prevAction = (leftPosition, carrouselWidth, track) => {
+    if (leftPosition > 0) {
+        track.style.left = `${-1 * (leftPosition - carrouselWidth)}px`;
     }
+}
 
-    App.prototype.processingButton = function(event) {
-        const btn = event.currentTarget;
-        const carrouselList = event.currentTarget.parentNode;
-        const track = event.currentTarget.parentNode.querySelector('#track');
-        const carrousel = track.querySelectorAll('.carrousel-img');
-
-        const carrouselWidth = carrousel[0].offsetWidth;
-
-        const trackWidth = track.offsetWidth;
-        const listWidth = carrouselList.offsetWidth;
-
-        track.style.left == "" ? leftPosition = track.style.left = 0 : leftPosition = parseFloat(track.style.left.slice(0,-2) * -1);
-        btn.dataset.button == "button-prev" ? prevAction(leftPosition,carrouselWidth, track) : nextAction(leftPosition, trackWidth, listWidth, carrouselWidth, track);
-
+let nextAction = (leftPosition, trackWidth, listWidth, carrouselWidth, track) => {
+    if (leftPosition < (trackWidth - listWidth)) {
+        track.style.left = `${-1 * (leftPosition + carrouselWidth)}px`;
     }
-
-    let prevAction = (leftPosition, carrouselWidth, track) => {
-        if (leftPosition > 0) {
-            track.style.left = `${-1 * (leftPosition - carrouselWidth)}px`;
-        }
-    }
-
-    let nextAction = (leftPosition, trackWidth, listWidth, carrouselWidth, track) => {
-        if (leftPosition <  (trackWidth - listWidth)) {
-            track.style.left = `${-1 * (leftPosition + carrouselWidth)}px`;
-        }
 }
 
 // *FIN Carrousel Functions
@@ -103,7 +103,7 @@ function setActiveBtn(e) {
     btns.forEach(btn => {
         btn.classList.remove('active-btn'); //Quita la Clase 'active-btn' a todos los botones
     });
-    
+
     //Agrego la clase al boton que se le hizo click
     e.target.classList.add('active-btn');
 }
@@ -154,3 +154,63 @@ btns[0].addEventListener('click', (e) => {
         img.classList.add('img_expand');
     });
 });
+
+
+// Funciones de formularios
+const comments = [{
+    title: "Experiencia increible",
+    comment: "FANSCULP es sin duda el mejor lugar para llevar a cabo tus proyectos de diseño 3d. Desde el primer momento, el equipo me brindo una atención personalizada y profesional, asesoramiento en cada paso del proceso",
+    autor: "Miguel"
+}, {
+    title: "Buena atencion",
+    comment: "FANSCULP es sin duda el mejor lugar para llevar a cabo tus proyectos de diseño 3d. Desde el primer momento, el equipo me brindo una atención personalizada y profesional, asesoramiento en cada paso del proceso",
+    autor: "Jon"
+}, {
+    title: "Rapidisimo",
+    comment: "FANSCULP es sin duda el mejor lugar para llevar a cabo tus proyectos de diseño 3d. Desde el primer momento, el equipo me brindo una atención personalizada y profesional, asesoramiento en cada paso del proceso",
+    autor: "Rupert"
+},]
+const container_comments = document.getElementById("container_comments")
+const dots = document.getElementById("dots")
+const dot = document.getElementsByClassName("dot")
+
+let n_comment = 0;
+
+for (let i = 0; i < comments.length; i++) {
+    dots.innerHTML += `<span class="dot"></span>`
+} 
+
+function changeDots(n_comment) {
+    dot[n_comment].classList.add("active")
+    if (n_comment === 0) {
+        dot[1].classList.remove("active")
+        dot[2].classList.remove("active")
+    } else if (n_comment === 1) {
+        dot[0].classList.remove("active")
+        dot[2].classList.remove("active")
+    }else if (n_comment === 2) {
+        dot[0].classList.remove("active")
+        dot[1].classList.remove("active")
+    }
+}
+
+function changeComments(n_comment) {
+    container_comments.innerHTML = `<div class="comment">
+    <h4>${comments[n_comment].title}</h4>
+    <p>${comments[n_comment].comment}</p>
+    <span>${comments[n_comment].autor}</span>
+    </div>`
+    changeDots(n_comment)
+}
+
+setInterval(() => {
+    if (n_comment < comments.length) {
+        changeComments(n_comment)
+        n_comment = n_comment + 1
+    } else {
+        n_comment = 0
+        changeComments(n_comment)
+    }
+}, [2000])
+
+changeComments(n_comment)
