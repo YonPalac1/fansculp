@@ -772,16 +772,14 @@ h2 {
     border-radius: .4375rem;
     padding: .375rem 2%;
     font-size: 1.25rem;
+    cursor: pointer;
     color: #fff;
     font-family: var(--secondary-font);
 }
 
-#all_designs .filters button:hover {
+#all_designs .filters button:hover,
+#all_designs .filters .active-btn {
     /* Efecto al pasar el mouse*/
-    background-color: #2a5a86;
-}
-
-#all_designs .filters .active {
     background-color: #2a5a86;
 }
 
@@ -792,13 +790,26 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: .4375rem;
+    /* gap: .4375rem; */
 }
 
 #all_designs .container_designs .card img {
     width: 15.625rem;
+    margin: .5rem;
     height: auto;
     border-radius: .5rem;
+    transition: 0.6s;
+}
+
+/* Estilos para Javascript */
+#all_designs .container_designs .card .img_expand{
+    width: 15.625rem;
+    margin: .5rem;
+}
+
+#all_designs .container_designs .card .img_shrink{
+    width: 0;
+    margin: -.5rem;
 }
 
 /* *Fin Estilos Tabla de Diseños */
@@ -816,6 +827,8 @@ h2 {
     padding: 0 1.25rem;
     border-radius: .4375rem;
     font-family: var(--secondary-font);
+    font-size: 1.875rem;
+    cursor: pointer;
 }
 
 #all_designs .pages_designs p {
@@ -826,6 +839,29 @@ h2 {
 #all_designs .pages_designs button:hover {
     background-color: #2a5a86;
 }
+    /* *ESTILOS TEXTO DEBAJO */
+
+#all_designs .container_text{
+    margin-bottom: 3.75rem;
+}
+
+#all_designs .container_text h2, p{
+    text-align: center;
+}
+
+#all_designs .container_text h2{
+    font-family: var(--secondary-font);
+    font-size: 2.375rem;
+}
+
+#all_designs .container_text p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    margin: 1.25rem 10.875rem;
+}
+    /* *FIN ESTILOS TEXTO DEBAJO */
+
+
 
 /* *FIN TODOS LOS DISEÑOS* */
 
