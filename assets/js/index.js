@@ -82,3 +82,75 @@ function removeModals() {
     modals.classList.remove("openModal")
     nav.classList.remove("visible");
 }
+
+
+
+// ***Funciones de los Filtros*** //
+
+// Traigo los elementos del DOM
+const btns = document.querySelectorAll('.filters button');
+const imgs = document.querySelectorAll('.card img');
+
+// Agrego el click event a todos los botones
+
+for (let i = 1; i < btns.length; i++) {
+    btns[i].addEventListener('click', filterImg);
+}
+
+// Set active button on click
+function setActiveBtn(e) {
+    //Quito la clase activa de los botones
+    btns.forEach(btn => {
+        btn.classList.remove('active-btn'); //Quita la Clase 'active-btn' a todos los botones
+    });
+    
+    //Agrego la clase al boton que se le hizo click
+    e.target.classList.add('active-btn');
+}
+
+
+//Filtro las imagenes
+function filterImg(e) {
+    //Corro la funcion activebtn
+    setActiveBtn(e);
+
+    //Recorro todas las imagenes
+    imgs.forEach(img => {
+        // Expando todas las imagenes
+        img.classList.remove('img_shrink');
+        img.classList.add('img_expand');
+
+        // Traigo la data de los data-atributo
+
+        //Traigo el numero de data-img
+        const imgType = parseInt(img.dataset.img);
+
+        //Traigo el numero de data-btn
+        const btnType = parseInt(e.target.dataset.btn);
+
+        /* 
+        Si imgtype y btntype(donde se hizo click)
+        son iguales...
+        */
+
+        if (imgType !== btnType) {
+            // Escondo la imagen
+            img.classList.remove('img_expand');
+            img.classList.add('img_shrink');
+        }
+    });
+}
+
+
+// Establezco el evento al boton 'all'
+btns[0].addEventListener('click', (e) => {
+    // Corro la funcion de activebutton
+    setActiveBtn(e);
+
+    // Recorro todas las imagenes
+    imgs.forEach(img => {
+        // Expando todas las imagenes
+        img.classList.remove('img_shrink');
+        img.classList.add('img_expand');
+    });
+});

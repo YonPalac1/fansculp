@@ -41,6 +41,7 @@
         <span class="item" onclick="openRegister()">registrarse</span>
     </div>
     <!-- Fin Navbar -->
+    
     <!-- modales -->
     <section id="modals">
         <div class="backdrop" onclick="removeModals()"></div>
@@ -279,35 +280,32 @@
             <h1>TODOS LOS DISEÑOS</h1>
 
             <div class="filters"> <!-- Botones de filtros -->
-                <button>COLECCIONABLES</button>
-                <button>FUNKOS</button>
-                <button>ESTRUCTURAS REALISTAS</button>
-                <button>CARICATURAS</button>
-                <button>OBJETOS</button>
+                <button type="button" class="btn-filters active-btn">TODOS</button>
+                <button type="button" class="btn-filters" data-btn="1">COLECCIONABLES</button>
+                <button type="button" class="btn-filters" data-btn="2">FUNKOS</button>
+                <button type="button" class="btn-filters" data-btn="3">CARICATURAS</button>
+                <button type="button" class="btn-filters" data-btn="4">OBJETOS</button>
             </div>
 
             <div class="container_designs"> <!-- Cuadro de Imágenes -->
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga00.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga01.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga02.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga03.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga04.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga05.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga06.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga07.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga08.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga09.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga00.webp" alt=""></div>
-                <div class="card"><img src="./assets/images/todos_diseños/Tortuga01.webp" alt=""></div>
+                <div class="card"><img src="./assets/images/carrousel/Funko_a01.webp" alt="img" data-img="2"></div> <!-- Funkos -->
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga01.webp" alt="img" data-img="3"></div> <!-- Caricaturas -->
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga02.webp" alt="img" data-img="3"></div> <!-- Caricaturas -->
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga03.webp" alt="img" data-img="3"></div> <!-- Caricaturas -->
+                <div class="card"><img src="./assets/images/carrousel/Funko_a02.webp" alt="img" data-img="2"></div> <!-- Funkos -->
+                <div class="card"><img src="./assets/images/carrousel/Funko_a03.webp" alt="img" data-img="2"></div> <!-- Funkos -->
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga06.webp" alt="img" data-img="3"></div> <!-- Caricaturas -->
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga07.webp" alt="img" data-img="1"></div> <!-- Coleccionable -->
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga08.webp" alt="img" data-img="1"></div> <!-- Coleccionable -->
+                <div class="card"><img src="./assets/images/todos_diseños/Tortuga09.webp" alt="img" data-img="4"></div> <!-- Objetos -->
+                <div class="card"><img src="./assets/images/carrousel/Funko_a05.webp" alt="img" data-img="4"></div> <!-- Objetos -->
+                <div class="card"><img src="./assets/images/carrousel/Funko_a04.webp" alt="img" data-img="4"></div> <!-- Objetos -->
             </div>
 
             <div class="pages_designs"> <!-- Boton de páginas -->
-                <button>
-                    < </button>
-                        <p>2</p>
-                        <button>
-                            >
-                        </button>
+                <button> < </button>
+                <p>2</p>
+                <button> > </button>
             </div>
 
             <div class="container_text">
