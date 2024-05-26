@@ -178,7 +178,7 @@ let n_comment = 0;
 
 for (let i = 0; i < comments.length; i++) {
     dots.innerHTML += `<span class="dot"></span>`
-} 
+}
 
 function changeDots(n_comment) {
     dot[n_comment].classList.add("active")
@@ -188,7 +188,7 @@ function changeDots(n_comment) {
     } else if (n_comment === 1) {
         dot[0].classList.remove("active")
         dot[2].classList.remove("active")
-    }else if (n_comment === 2) {
+    } else if (n_comment === 2) {
         dot[0].classList.remove("active")
         dot[1].classList.remove("active")
     }
@@ -214,63 +214,3 @@ setInterval(() => {
 }, [2000])
 
 changeComments(n_comment)
-
-
-// *Validación de formulario
-/*/ const validarFormulario = (idFormulario) => {
-       const listaCampos = document.querySelectorAll(`#${idFormulario} [data-validate]`);
-       let validacion = true;
-       console.log('listaCampos :>> ', listaCampos);
-    if (listaCampos.length > 0) {
-     listaCampos.forEach(elemento => {
-         const tipoElemento = elemento.getAttribute("type");
-         console.log ('tipoElemento :>> ', tipoElemento);
-         if (elemento.value === "") {
-             validacion = false;
-             elemento.style.setProperty("border", "1 px solid red");
-             setTimeout(() => {
-                 elemento.style.setProperty("border", "");
-             }, 2000);
-         }
-         if (tipoElemento === "checkbox" && !elemento.checked) {
-             validacion = false;
-             elemento.style.setProperty("border", "1 px solid red");
-             setTimeout(() => {
-                 elemento.style.setProperty("border", "");
-             }, 2000);
-         })
-       }
- 
-    } /*/ 
-/*/ } /*/ 
-
- /*/ const enviarFormulario = () => {
-     event.preventDefault();
-     validarFormulario('form-validation');
-    } /*/ 
- 
- 
- // *FIN Validación de formulario
- 
-
- // *Botón hacia Arriba
- /*/ window.onscroll = function(){
-      console.log(document.documentElement.scrollTop);
-        if(document.documentElement.scrollTop > 100){
-           document.querySelector('.go-top-container') 
-           .classList.add('show');
-        } else {
-         document.querySelector('.go-top-container') 
-         .classList.remove('show');
-        }
-    } /*/
- 
- /*/ document.querySelector('.go-top-container') 
- .addEventListener('click', () => {
-       window.scrollTo ({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }) /*/ 
- // *FIN Botón hacia Arriba
- 
