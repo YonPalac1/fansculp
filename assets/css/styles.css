@@ -1072,8 +1072,9 @@ html{
 }
 
 .indications {
-    max-width: 1200px;
-    width: 1000px;
+    background: rgb(1, 17, 34);
+    /*max-width: 1200px;*/
+    width: 100%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
