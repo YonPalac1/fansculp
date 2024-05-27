@@ -1,65 +1,35 @@
 /* *Botón hacia Arriba* */
-.go-top-container {
-    scale: .5;
+
+html {
+    scroll-behavior: smooth;
+}
+
+#progress {
+    background-color: #290e77;
     position: fixed;
     bottom: 2rem;
-    right: 2rem;
-    width: 1rem;
-    height: 1rem;
-    z-index: -1;
-}
-
-.go-top-button {
-    width: 0rem;
-    height: 0rem;
-    background: #2071b2;
+    right: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: none;
+    place-items: center;
     border-radius: 50%;
+    z-index: 10000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: .2s;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
 }
 
-.go-top-button .i {
-    position: absolute;
-    font-size: 1.7rem;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    color: rgb(255, 255, 255);
-    transition: .2s;
-}
+#progress-value {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: #290e77;
 
-.show{
-    z-index: 1000;
-}
-
-.show .go-top-button {
-    animation: popup .3s ease-in-out;
-    width: 6.6rem;
-    height: 6.6rem;
-    z-index: 1100;
-}
-
-.show .i {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-@keyframes popup {
-    0% {
-        width: 0rem;
-        height: 0rem;
-    }
-    50% {
-        width: 8rem;
-        height: 8rem;
-    }
-    100& {
-        width: 6.6rem;
-        height: 6.6rem;
-    }
 }
 
 /* *FIN Botón hacia Arriba* */
