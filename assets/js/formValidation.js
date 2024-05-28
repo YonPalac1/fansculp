@@ -20,8 +20,12 @@ const validarFormulario = (idFormulario) => {
                 setTimeout(() => {
                     elemento.style.setProperty("border", "");
                 }, 2000);
+<<<<<<< HEAD
             }}
         )
+=======
+            })
+>>>>>>> c1a5fa667f9f41aa2b2151fbb08f727ff5d5cebd
     }
 }
 
