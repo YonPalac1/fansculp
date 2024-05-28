@@ -81,8 +81,4 @@ function trackMouse(e) {
     )
   }
 document.addEventListener("mousemove", trackMouse)
-
-for (let i = 0; i < parallax.length; i++) {
-    
-}
 //****************************************************************************************************/

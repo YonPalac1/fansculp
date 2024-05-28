@@ -36,7 +36,14 @@ h2 {
     margin: auto;
 }
 
-/* *ESTILOS NAVBAR* */
+
+/* *Sroll suave* */
+html{
+    scroll-behavior: smooth;
+}
+/* *FIN Sroll suave* */
+
+
 /* *ESTILOS NAVBAR* */
 
 .nav-header {
@@ -264,7 +271,7 @@ h2 {
     width: var(--cursor-size);
     height: var(--cursor-size);
     border-radius: var(--cursor-size);
-    background: var(--bg);
+    background: white;
     transform-origin: center center;
 }
 
@@ -425,8 +432,7 @@ h2 {
 
     #header .container .titles h1,
     #header .container .titles span {
-        font-size: 4rem;
-        margin-bottom: -4.375rem;
+        font-size: 3rem;
     }
 
     #header .container .subtitles {
@@ -434,7 +440,7 @@ h2 {
     }
 
     #header .container .subtitles img.icon {
-        width: 8.125rem;
+        width: 6rem;
     }
 
     #header .social_icons {
@@ -453,7 +459,7 @@ h2 {
 
     #header .container .titles h1,
     #header .container .titles span {
-        font-size: 4.5rem;
+        font-size: 3rem;
         margin-bottom: -5rem;
     }
 
@@ -480,6 +486,7 @@ h2 {
     #header .container .titles h1,
     #header .container .titles span {
         font-size: 5rem;
+        margin-bottom: -5rem;
     }
 
     #header .container .subtitles {
@@ -527,8 +534,7 @@ h2 {
 
     #header .container .titles h1,
     #header .container .titles span {
-        font-size: 6.5rem;
-        margin-bottom: -6.25rem;
+        font-size: 6rem;
     }
 
     #header .container .subtitles {
@@ -545,43 +551,15 @@ h2 {
 }
 
 @media screen and (min-width: 1200px) {
-
     #header .container .titles h1,
     #header .container .titles span {
-        font-size: 7rem;
-        margin-bottom: -6.25rem;
+        font-size: 6.5rem;
     }
-
     #header .container .subtitles {
         margin-top: -5rem;
     }
 }
 
-@media screen and (min-width: 1300px) {
-
-    #header .container .titles h1,
-    #header .container .titles span {
-        font-size: 8rem;
-        margin-bottom: -6.875rem;
-    }
-
-    #header .container .subtitles {
-        margin-top: -7.5rem;
-    }
-}
-
-@media screen and (min-width: 1500px) {
-
-    #header .container .titles h1,
-    #header .container .titles span {
-        font-size: 9rem;
-        margin-bottom: -8.75rem;
-    }
-
-    #header .container .subtitles {
-        margin-top: -5rem;
-    }
-}
 
 /* *FIN HEADER* */
 
@@ -667,12 +645,7 @@ h2 {
     padding: .9375rem;
 }
 
-.carrousel-img h4 small {
-    font-size: .9375rem;
-    display: block;
-}
-
-.carrousel-img a img {
+.carrousel-img img {
     object-fit: cover;
     height: 18.75rem;
     width: 12.5rem;
@@ -852,6 +825,7 @@ h2 {
 #all_designs .container_text h2{
     font-family: var(--secondary-font);
     font-size: 2.375rem;
+    margin: .625rem;
 }
 
 #all_designs .container_text p{
@@ -859,10 +833,14 @@ h2 {
     font-size: 1.25rem;
     margin: 1.25rem 10.875rem;
 }
+
+@media screen and (max-width: 900px){
+    #all_designs .container_text p {
+        margin: 1.25rem 5rem;
+    }
+}
+
     /* *FIN ESTILOS TEXTO DEBAJO */
-
-
-
 /* *FIN TODOS LOS DISEÑOS* */
 
 
@@ -905,14 +883,16 @@ h2 {
     display: flex;
     gap: 1rem;
 }
-#comments .dots span {
+#comments .dots button {
     width: 20px;
     height: 20px;
+    border: none;
     background-color: gray;
     border-radius: 50%;
     transition: .5s;
+    cursor: crosshair;
 }
-#comments .dots span.active {
+#comments .dots button.active {
     background-color: var(--blue-light);
 }
 @media screen and (max-width: 1000px) {
@@ -990,11 +970,12 @@ h2 {
 
 .indications {
     max-width: 1200px;
-    width: 1000px;
+    width: 100%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
+    position: relative;
     z-index: 2;
 }
 .indications > div {
@@ -1125,6 +1106,14 @@ h2 {
     padding: 2.8125rem 0rem;
 }
 
+.us {
+    text-align: center;
+}
+
+.follow {
+    text-align: center;
+}
+
 .pie-pagina .grupo-1 .box figure {
     width: 100%;
     height: 100%;
@@ -1146,6 +1135,12 @@ h2 {
 .pie-pagina .grupo-1 .box p {
     color: #efefef;
     margin-bottom: .625rem;
+}
+
+.red-social {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .pie-pagina .grupo-1 .red-social a {
