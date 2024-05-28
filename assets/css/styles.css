@@ -594,7 +594,7 @@ html{
 
 }
 
-.carrousel h1 {
+.carrousel h2 {
     font-size: 2.8125rem;
     line-height: 2.375rem;
     padding-bottom: 3.125rem;
@@ -720,7 +720,7 @@ html{
     align-items: center;
 }
 
-#all_designs h1 {
+#all_designs h2 {
     text-align: center;
     margin: 1.25rem 0;
     font-size: 2.5rem;
@@ -938,7 +938,8 @@ html{
 }
 
 #contact .form form input,
-#contact .form form textarea {
+#contact .form form textarea,
+#contact .form form select {
     border: none;
     padding: 8px 12px;
     border-radius: 5px;
