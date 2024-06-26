@@ -1,0 +1,59 @@
+.container {
+    max-width: 1200px;
+    min-width: 400px;
+    margin: auto;
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+.title a {
+    padding: 8px 12px;
+    background-color: blue;
+    border-radius: 5px;
+    text-align: center;
+    height: 10%;
+    margin: 2rem;
+    cursor: pointer;
+    color: white;
+}
+.table {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.table-head {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(170, 240, 170);
+    border-bottom: 1px solid #ccc;
+}
+.table-body .products {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+.table-body img {
+    width: 100px;
+}
+
+.div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+.id {
+    width: 5%;
+}
+.table-body .actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+.table-body .actions button.edit {
+    background-color: rgb(98, 239, 98);
+}
+.table-body .actions button.delete {
+    background-color: rgb(240, 100, 100);
+}

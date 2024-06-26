@@ -43,7 +43,7 @@ const carrouselWidth = carrousel[0].offsetWidth;
 const trackWidth = track.offsetWidth;
 const listWidth = carrouselList.offsetWidth;
 
-let leftPosition  = 0
+let leftPosition = 0
 let timer = 5000
 
 function moveCarousel(e) {

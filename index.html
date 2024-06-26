@@ -9,7 +9,10 @@
 
     <link rel="stylesheet" href="./assets/css/styles.css"> <!-- Link del CSS -->
     <link rel="stylesheet" href="./assets/css/gotopbutton.css"> <!-- Link del Go top Button CSS -->
-    <script src="https://kit.fontawesome.com/6dd2fe1ff1.js" crossorigin="anonymous"></script> <!-- Link de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script src="https://kit.fontawesome.com/6dd2fe1ff1.js" crossorigin="anonymous"></script>
+    <!-- Link de Font Awesome -->
 </head>
 
 <body>
@@ -28,7 +31,7 @@
                 <li><a href="#all_designs">DISEÑOS</a></li>
                 <li><a href="#about-us">NOSOTROS</a></li>
                 <li><a href="#comments">RESEÑAS</a></li>
-                <li><a href="#form">FORMULARIO</a></li>
+                <li><a href="#form">CONTACTO</a></li>
                 <li onclick="openMenu()"><img class="nav-user" src="./assets/images/user.webp" alt=""></li>
             </ul>
             <ul class="nav-list login_register">
@@ -56,7 +59,7 @@
                 <button>Ingresar</button>
             </form>
             <div>
-                <p>No tenés una cuenta?</p> 
+                <p>No tenés una cuenta?</p>
                 <span onclick="openRegister()">Registrate</span>
             </div>
         </div>
@@ -75,7 +78,7 @@
                 <button>Registrarme</button>
             </form>
             <div>
-                <p>Ya tenés una cuenta?</p> 
+                <p>Ya tenés una cuenta?</p>
                 <span onclick="openLogin()">Ingresá</span>
             </div>
         </div>
@@ -85,6 +88,8 @@
     <!-- Header -->
     <div id="cursor"></div>
     <header id="header">
+        <img src="./assets/images/grid_bg-l.png" class="grid_bg-l">
+        <img src="./assets/images/grid_bg.png" class="grid_bg">
         <div class="container">
             <div class="titles">
                 <div class="bg_images" id="image_example"></div>
@@ -104,7 +109,9 @@
                     src="../assets/images/triangle_black.png" alt="logo fansculp 3d">
                 <img class="arrow animate__animated animate__fadeInDown animate__delay-2s"
                     src="../assets/images/triangle_black.png" alt="logo fansculp 3d">
-            </div>
+
+                </div>
+                
             <div class="social_icons animate__animated animate__fadeInUp animate__delay-1s">
                 <div class="icon">
                     <a href="https://facebook.com/fansculp" class="fa fa-facebook"></a>
@@ -119,6 +126,9 @@
                     <a href="https://youtube.com/@fansculp" class="fa fa-youtube"></a>
                 </div>
                 <div class="line"></div>
+            </div>
+            <div class="paragraph">
+                <p>Ofrecemos servicios de diseño e impresión 3D de alta calidad para ayudarte a materializar tus creaciones más ambiciosas.</p>
             </div>
         </div>
     </header>
@@ -236,7 +246,7 @@
             </div>
 
             <div class="pages_designs"> <!-- Boton de páginas -->
-                <button><i class="fas fa-arrow-left"></i></button>
+                <button><</button>
                 <p>2</p>
                 <button> > </button>
             </div>
@@ -336,9 +346,9 @@
 
 
     <!-- Botón ir hacia Arriba -->
-    <!-- <div id="progress">
+    <div id="progress">
         <span id="progress-vaslue">&#x1F815;</span>
-    </div> -->
+    </div>
     <!-- <div class="go-top-container">
           <div class="go-top-button">
             <i class="fa-solid fa-chevron-up"></i>
@@ -388,7 +398,6 @@
     <!-- !Link de JS -->
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/cursorTail.js"></script>
-    <script src="./assets/js/imagesFunction.js"></script>
     <script src="./assets/js/formValidation.js"></script>
     <script src="./assets/js/gotopButton.js"></script>
 </body>

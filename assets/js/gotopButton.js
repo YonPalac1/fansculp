@@ -16,11 +16,7 @@ let calcScrollValue = () => {
         document.documentElement.scrollTop = 0;
 
     });
-<<<<<<< HEAD
     // scrollProgress.style.background = `conic-gradient(#03cc65 ${ScrollValue}%, #d7d7d7 ${scrollValue}%)`;
-=======
-    scrollProgress.style.background = `conic-gradient(#03cc65 ${ScrollValue}%, #d7d7d7 ${scrollValue}%)`;
->>>>>>> c1a5fa667f9f41aa2b2151fbb08f727ff5d5cebd
 
 };
 
