@@ -52,12 +52,16 @@ function moveCarousel(e) {
         if (leftPosition > 0) {
             track.style.left = `${-1 * (leftPosition - carrouselWidth)}px`;
             leftPosition = leftPosition - carrouselWidth
+        } else {
+            leftPosition = carrouselWidth
         }
     }
     let nextAction = (leftPosition, trackWidth, listWidth, carrouselWidth, track) => {
         if (leftPosition < (trackWidth - listWidth)) {
             track.style.left = `${-1 * (leftPosition + carrouselWidth)}px`;
             leftPosition = leftPosition + carrouselWidth
+        } else {
+            leftPosition = 0;
         }
     }
     track.style.left == "" ? leftPosition = track.style.left = 0 : leftPosition = parseFloat(track.style.left.slice(0, -2) * -1);
@@ -67,6 +71,8 @@ setInterval(() => {
     if (leftPosition < (trackWidth - listWidth)) {
         track.style.left = `${-1 * (leftPosition + carrouselWidth)}px`;
         leftPosition = leftPosition + carrouselWidth
+    } else {
+        leftPosition = 0;
     }
 }, [timer])
 
