@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon_02.webp" type="image/x-icon"> <!-- Link del favicon -->
+    <title>FANSCULP™ | Diseño e impresion 3D</title>
+
+    <link rel="stylesheet" href="../assets/css/styles_admin.css"> <!-- Link del Go top Button CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script src="https://kit.fontawesome.com/6dd2fe1ff1.js" crossorigin="anonymous"></script>
+    <!-- Link de Font Awesome -->
+</head>
+
+<body>
+<section class="sidebar container">
+        <ul>
+            <li><a href="./index.html">ver usuarios</a> </li>
+            <li><a href="./products_list.html">ver productos</a> </li>
+            <li><a href="./form_new_product.html">agregar productos</a> </li>
+        </ul>
+    </section>
+	<div class="container form_container">
+		<h3>Agregar producto</h3>
+		<form class="form">
+			    <div class="profile-picture">
+			      <h1 class="upload-icon">
+			        <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+			      </h1>
+			      <input
+			        class="file-uploader"
+			        type="file"
+			        onchange="upload()"
+			        accept="image/*"
+			      />
+			    </div>
+			    <label>nombre</label>
+			    <input type="text" placeholder="nombre">
+
+			    <button>subir</button>
+		</form>
+	</div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ]
 
         for (let i = 0; i < designs.length; i++) {
-            container_designs.innerHTML += `<div class="card"><img src=${designs[i].img} alt=""></div>`
+            container_designs.innerHTML += `<div class="card"><img src=${designs[i].img} data-img="${designs[i].id}" alt=""></div>`
         }
     })
 })
