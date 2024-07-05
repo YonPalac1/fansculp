@@ -37,25 +37,54 @@
                 </div>
             </div>
 
-            <div class="table-body">
-                <div class="products">
-                    <div class="id div">
-                        <p>1</p>
-                    </div>
-                    <div class="name div">
-                        <p>Nombre</p>
-                    </div>
-                    <div class="image div">
-                        <img src="../assets/images/carrousel/Funko_a01.jpg">
-                    </div>
-                    <div class="actions div">
-                        <a class="edit" href="./form_edit_product.html">editar</a>
-                        <button class="delete">eliminar</button>
-                    </div>
-                </div>
+            <div class="table-body" id="table_data">
+                
             </div>
         </div>
     </div>
     
 </body>
+<script>
+    const URL = "http://127.0.0.1:5000/get_all_products"
+    const table_data = document.getElementById("table_data")
+
+    fetch(URL)
+        .then((res) => {
+                
+            if (res.ok) {
+                return res.json()    
+            }
+            else {
+                throw new Error('Error al obtener los productos.');
+            }
+        })
+        .then((data) => {
+            for (product of data) {
+                table_data.innerHTML += `<div class="products">
+                    <div class="id div">
+                        <p>${product.id}</p>
+                    </div>
+                    <div class="name div">
+                        <p>${product.name}</p>
+                    </div>
+                    <div class="image div">
+                        <img src="../static/imagenes/${product.name_image}">
+                    </div>
+                    <div class="actions div">
+                        <a class="edit" href="./form_edit_product.html?${product.id}">editar</a>
+                        <button class="delete">eliminar</button>
+                    </div>
+                </div>`
+            }
+        })
+        .catch(function (error) {
+            // Código para manejar errores
+            table_data.innerHTML = `<div class="products">
+                        <div class="div">
+                            <p>No se encontraron Usuarios</p>
+                        </div>
+                </div>`
+            alert('Error al obtener los usuarios.');
+        });
+</script>
 </html>

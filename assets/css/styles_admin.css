@@ -119,14 +119,14 @@
     gap: 1rem;
     max-width: 350px;
 }
-.form input {
+form input {
     margin-top: -10px;
     border: 1px solid #ccc;
     border-top: none;
     border-left: none;
     border-right: none;
 }
-.form button {
+form button {
     padding: 8px 12px;
     background: blue;
     border: none;
