@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="../assets/images/favicon_02.webp" type="image/x-icon"> <!-- Link del favicon -->
+	<title>FANSCULP™ | Diseño e impresion 3D</title>
+
+	<link rel="stylesheet" href="../assets/css/styles_admin.css"> <!-- Link del Go top Button CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+	<script src="https://kit.fontawesome.com/6dd2fe1ff1.js" crossorigin="anonymous"></script>
+	<!-- Link de Font Awesome -->
+</head>
+
+<body>
+	<section class="sidebar container">
+		<ul>
+			<li><a href="./index.html">Ver usuarios</a> </li>
+			<li><a href="./products_list.html">Ver productos</a> </li>
+			<li><a href="./form_new_product.html">Agregar productos</a> </li>
+		</ul>
+	</section>
+	<div class="container form_container">
+		<h3>Eliminar producto</h3>
+		<form id="formulario" class="form" enctype="multipart/form-data">
+			<!-- <div class="profile-picture">
+				<h1 class="upload-icon">
+					<i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+				</h1>
+				<input class="file-uploader" type="file" name="image" id="image" onchange="upload()" accept="image/*" />
+			</div> -->
+			<label>Nombre</label>
+			<input id="name" type="text" name="name" placeholder="nombre">
+			<label>ID</label>
+			<input id="category_id" value=1 name="category_id">
+			<button type="submit">Eliminar</button>
+		</form>
+	</div>
+
+	<script src="./script.js"></script>
+	<script>
+		const URL = "http://127.0.0.1:5000/delete-product";
+
+		document.getElementById('formulario').addEventListener('submit',
+			function (event) {
+				event.preventDefault();
+				var formData = new FormData(this);
+
+				fetch(URL, {
+					method: 'DELETE',
+					body: formData
+				})
+				.then()
+					.then(function (response) {
+						if (response.ok) {
+							return response.json();
+						} else {
+							throw new Error('Error al eliminar el producto.');
+						}
+					})
+					.then(function (data) {
+						alert('Producto eliminado correctamente.');
+					})
+					.catch(function (error) {
+						alert('Error al eliminar el producto.');
+					})
+					.finally(function () {
+						document.getElementById('name').value = "";
+						document.getElementById('price').value = "";
+						document.getElementById('image').value = "";
+					});
+			})
+
+	</script>
+</body>
+
+</html>

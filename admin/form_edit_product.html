@@ -47,6 +47,8 @@
 			.then((data) => {
 				formulario.innerHTML = `
 						<img src="../static/imagenes/${data.name_image}">
+						//<img src="https://franconioi.pythonanywhere.com/static/imagenes/${data.name_image}">
+
 					<label>nombre</label>
 					<input id="name" type="text" name="name" placeholder="nombre" value="${data.name}">
 					<label>Precio</label>

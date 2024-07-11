@@ -45,6 +45,8 @@
     
 </body>
 <script>
+    //const URL = "https://franconioi.pythonanywhere.com/"
+
     const URL = "http://127.0.0.1:5000/get_all_products"
     const table_data = document.getElementById("table_data")
 
@@ -69,10 +71,11 @@
                     </div>
                     <div class="image div">
                         <img src="../static/imagenes/${product.name_image}">
+                        //<img src="https://franconioi.pythonanywhere.com/static/imagenes/${product.name_image}">
                     </div>
                     <div class="actions div">
-                        <a class="edit" href="./form_edit_product.html?${product.id}">editar</a>
-                        <button class="delete">eliminar</button>
+                        <a class="edit" href="./form_edit_product.html?${product.id}">Editar</a>
+                        <a class="edit" href="./form_delete_product.html?${product.id}">Eliminar</a>
                     </div>
                 </div>`
             }
