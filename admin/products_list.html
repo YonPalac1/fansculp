@@ -47,10 +47,12 @@
 <script>
     //const URL = "https://franconioi.pythonanywhere.com/"
 
-    const URL = "http://127.0.0.1:5000/get_all_products"
+    // const URL = "http://127.0.0.1:5000/get_all_products"
     const table_data = document.getElementById("table_data")
 
-    fetch(URL)
+    const URL = "http://127.0.0.1:5000/"
+
+    fetch(URL + `get_all_products`)
         .then((res) => {
                 
             if (res.ok) {
@@ -71,11 +73,10 @@
                     </div>
                     <div class="image div">
                         <img src="../static/imagenes/${product.name_image}">
-                        //<img src="https://franconioi.pythonanywhere.com/static/imagenes/${product.name_image}">
                     </div>
                     <div class="actions div">
                         <a class="edit" href="./form_edit_product.html?${product.id}">Editar</a>
-                        <a class="edit" href="./form_delete_product.html?${product.id}">Eliminar</a>
+                        <button onclick="deleteProduct(${product.id})" class="edit">"Eliminar"</button>
                     </div>
                 </div>`
             }
@@ -89,5 +90,23 @@
                 </div>`
             alert('Error al obtener los usuarios.');
         });
+
+    function deleteProduct(id){
+        // Mostramos un dialogo de confiramción para borrar un producto
+        console.log(id)
+        if (confirm('¿Estás seguro de que quieres eliminar este producto?')){
+            fetch(URL + `delete-product/${id}`, {method: 'DELETE'})
+            .then(response => {
+                if (response.ok) {
+                    // Si es exitoso eliminar un producto
+                    alert('Producto eliminado correctamente.');
+                }
+            })
+            // En caso de error, mostramos una alerta con un mensaje de error.
+            .catch(error => {
+                alert(error.message);
+            })
+        }
+    }
 </script>
 </html>

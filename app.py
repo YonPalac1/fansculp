@@ -10,7 +10,7 @@ import data as bd
 app = Flask(__name__)
 CORS(app)
 
-ruta_destino = './static/imagenes/'
+ruta_destino = './static/imagenes'
 #ruta_destino = 'home/franconioi/mysite/static/imagenes/'
 
 class Catalogo:
@@ -92,7 +92,7 @@ class Catalogo:
         return self.cursor.lastrowid
 
     def get_one_product(self, id):
-        self.cursor.execute("SELECT * FROM products WHERE id = %s", (id,))
+        self.cursor.execute("SELECT * FROM products WHERE id = %s", (id))
         return self.cursor.fetchone()
 
     def update_product(self, id, new_name, new_price, new_category_id):
