@@ -11,7 +11,7 @@ app = Flask(__name__)
 CORS(app)
 
 #ruta_destino = './static/imagenes'
-ruta_destino = 'home/franconioi/mysite/static/imagenes/'
+ruta_destino = '/home/franconioi/mysite/static/imagenes/'
 
 class Catalogo:
     def __init__(self, host, user, password, database):
