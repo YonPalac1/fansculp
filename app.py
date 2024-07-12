@@ -32,6 +32,7 @@ class Catalogo:
                 print(err)
                 raise err
                 
+        # Crear la tabla roles
         self.cursor.execute('''CREATE TABLE IF NOT EXISTS roles (
                 id INT PRIMARY KEY AUTO_INCREMENT,
                 type VARCHAR(255) NOT NULL);''')
@@ -40,6 +41,7 @@ class Catalogo:
                                 ("maker"),
                                 ("user");''')
         
+        # Crear la tabla categories
         self.cursor.execute('''CREATE TABLE IF NOT EXISTS categories (
                 id INT AUTO_INCREMENT PRIMARY KEY,
                 name VARCHAR(255) NOT NULL);''')
@@ -48,6 +50,7 @@ class Catalogo:
                                 ("Caricaturas"),
                                 ("Esculturas");''')
 
+        # Crear la tabla users
         self.cursor.execute('''CREATE TABLE IF NOT EXISTS users (
                 id INT PRIMARY KEY AUTO_INCREMENT,
                 name VARCHAR(255) NOT NULL,
@@ -57,6 +60,7 @@ class Catalogo:
                 role_id INT NOT NULL,
                 FOREIGN KEY (role_id) REFERENCES roles(id));''')
         
+        # Crear la tabla products
         self.cursor.execute('''CREATE TABLE IF NOT EXISTS products (
                 id INT PRIMARY KEY AUTO_INCREMENT,
                 name VARCHAR(255) NOT NULL,
@@ -92,7 +96,7 @@ class Catalogo:
         return self.cursor.lastrowid
 
     def get_one_product(self, id):
-        self.cursor.execute("SELECT * FROM products WHERE id = %s", (id))
+        self.cursor.execute("SELECT * FROM products WHERE id = %s", (id,))
         return self.cursor.fetchone()
 
     def update_product(self, id, new_name, new_price, new_category_id):
@@ -108,7 +112,7 @@ class Catalogo:
         return products
 
     def delete_product(self, id):
-        self.cursor.execute(f"DELETE FROM products WHERE id = {id}")
+        self.cursor.execute("DELETE FROM products WHERE id = %s", (id,))
         self.conn.commit()
         return self.cursor.rowcount > 0
 

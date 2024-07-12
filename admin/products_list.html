@@ -47,7 +47,8 @@
 <script>
     //const URL = "https://franconioi.pythonanywhere.com/"
 
-    // const URL = "http://127.0.0.1:5000/get_all_products"
+    //const URL = "http://127.0.0.1:5000/get_all_products"
+
     const table_data = document.getElementById("table_data")
 
     const URL = "http://127.0.0.1:5000/"
@@ -76,7 +77,7 @@
                     </div>
                     <div class="actions div">
                         <a class="edit" href="./form_edit_product.html?${product.id}">Editar</a>
-                        <button onclick="deleteProduct(${product.id})" class="edit">"Eliminar"</button>
+                        <button onclick="deleteProduct(${product.id})" class="edit">Eliminar</button>
                     </div>
                 </div>`
             }
